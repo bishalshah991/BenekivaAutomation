@@ -1,0 +1,137 @@
+[
+
+  {
+    "question": "What is the insured's first name?",
+    "answer": "First"
+  },
+  {
+    "question": "What is the insured's middle initial?",
+    "answer": "Mid"
+  },
+  {
+    "question": "What is the insured's last name?",
+    "answer": "Last"
+  },
+  {
+    "question": "What is the insured's Maiden Name (or other names they are known by)?",
+    "answer": "Maiden"
+  },
+  {
+    "question": "What is the insured's policy or certificate Number(s)?",
+    "answer": "2232323"
+  },
+  {
+    "question": "What is the insured's Social Security Number?",
+    "answer": "1234"
+  },
+  {
+    "question": "Enter insured's date of birth",
+    "action" : "CALANDER_ACTION",
+    "Year" : "1999",
+    "Month" : "FEB",
+    "Day" : "11"
+  },
+  {
+    "question": "Enter insured's date of death",
+    "action" : "CALANDER_ACTION",
+    "Year" : "2020",
+    "Month" : "FEB",
+    "Day" : "11"
+  },
+  {
+    "question": "Select Cause of Death",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Natural"
+
+  },
+  {
+    "question": "Select Gender",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Male"
+  },
+  {
+    "question": "Was deceased receiving Medicaid?",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Yes"
+  },
+  {
+    "question": "Select insured's State of residence",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "AR"
+  },
+  {
+    "question": "How much is the funeral bill amount?",
+    "answer": "222.22"
+  },
+  {
+    "question": "What is the funeral home's name?",
+    "answer": "test"
+  },
+  {
+    "question": "What is the funeral home's tax ID number?",
+    "answer": "2222"
+  },
+  {
+    "question": "Where is the funeral home located?",
+    "answer": "Test"
+  },
+  {
+    "question": "In which city?",
+    "answer": "Test"
+  },
+  {
+    "question": "In which state?",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "TX"
+  },
+  {
+    "question": "What is the funeral home's ZIP code?",
+    "answer": "2323"
+  },
+  {
+    "question": "What is the funeral home's phone number?",
+    "answer": "21323232323"
+  },
+  {
+    "question": "What is the funeral home's fax number?",
+    "answer": "33333333333"
+  },
+  {
+    "question": "What is the funeral home's email address?",
+    "answer": "test@test.com"
+  },
+  {
+    "question": "Select how benefit amount will be paid out",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "1 check to funeral home for funeral amount"
+  },
+  {
+    "question": "Funeral Director's Printed Name",
+    "answer": "test"
+  },
+  {
+    "question": "Signature of Funeral Director",
+    "action" : "SIGNATURE_ACTION",
+    "value" : "signatureHelper"
+  },
+  {
+    "question": "Can beneficiary or next of kin sign the claimant form?",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Yes"
+  },
+  {
+    "question": "Next of Kin or Beneficiary's Printed Name",
+    "answer": "test"
+  },
+  {
+    "question": "Signature of Beneficiary or Next of Kin",
+    "action" : "SIGNATURE_ACTION",
+    "value" : "signatureHelper"
+  },
+  {
+    "question": "Upload Funeral Home Bill",
+    "action" : "UPLOADDOCUMENT_ACTION",
+    "value" : "uploadDocumentHelper"
+  }
+]
+
