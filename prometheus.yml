@@ -1,0 +1,9 @@
+#This is used to moniter docker images.
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'automation'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['automation:8080']

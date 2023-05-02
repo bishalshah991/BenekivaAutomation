@@ -1,0 +1,205 @@
+[
+  {
+    "question": "Enter insured's date of birth",
+    "action" : "CALANDER_ACTION",
+    "Year" : "1999",
+    "Month" : "FEB",
+    "Day" : "11"
+  },
+  {
+    "question": "What is the insured's policy or certificate Number(s)?",
+    "answer": "12345"
+  },
+  {
+    "question" : "What is the insured's first name?",
+    "answer" : "Automation"
+  },
+  {
+    "question" : "What is the insured's middle initial?",
+    "answer" : "test"
+  },
+  {
+    "question" : "What is the insured's last name?",
+    "answer" : "Testing"
+  },
+  {
+    "question" : "What is the insured's Maiden Name (or other names they are known by)?",
+    "answer" : "Maiden"
+  },
+  {
+    "question" : "What is the insured's Social Security Number?",
+    "answer" : "111-11-1111"
+  },
+  {
+    "question": "Enter insured's date of death",
+    "action" : "CALANDER_ACTION",
+    "Year" : "2020",
+    "Month" : "FEB",
+    "Day" : "11"
+
+  },
+  {
+    "question": "Select Cause of Death",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Natural"
+
+  },
+  {
+    "question": "Select Gender",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Male"
+  },
+  {
+    "question" : "Where is the insured Street Address?",
+    "answer" : "Test"
+
+  },
+  {
+    "question" : "In which City?",
+    "answer" : "City"
+  },
+  {
+    "question": "Select insured's State of residence",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "AL"
+
+  },
+  {
+    "question" : "What is the insured's Zip code",
+    "answer" : "12312"
+  },
+  {
+    "question": "Was deceased receiving Medicaid?",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Yes"
+  },
+  {
+    "question" : "How much is the funeral bill amount?",
+    "answer" : "111.11"
+  },
+  {
+    "question" : "What is the funeral home's name?",
+    "answer" : "HITE FUNERAL HOME"
+  },
+  {
+    "question" : "What is the funeral home's tax ID number?",
+    "answer" : "123142313"
+  },
+  {
+    "question" : "Where is the Funeral Home Street Address?",
+    "answer" : "address"
+  },
+  {
+    "question" : "In which city?",
+    "action" : "PREFILLED_DATA",
+    "answer" : "test"
+  },
+  {
+    "question" : "In which state?",
+    "action" : "PREFILLED_DATA",
+    "action" : "DROPDOWN_ACTION",
+    "answer" : "IN"
+
+  },
+  {
+    "question" : "What is the funeral home's ZIP code?",
+    "action" : "PREFILLED_DATA"
+  },
+  {
+    "question" : "What is the funeral home's phone number?",
+    "answer" : "12313131313"
+  },
+  {
+    "question" : "What is the funeral home's fax number?",
+    "answer" : "12345678904"
+  },
+  {
+    "question" : "What is the funeral home's email address?",
+    "answer" : "test@test.com"
+  },
+  {
+    "question": "Select how benefit amount will be paid out",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Check"
+  },
+  {
+    "question" : "What is the beneficiary's full name?",
+    "answer" : "Beneficiary Test"
+  },
+  {
+    "question" : "What is the beneficiary's relationship to the insured?",
+    "answer" : "test"
+  },
+  {
+    "question" : "Where is the beneficiary residing?",
+    "answer" : "test"
+  },
+  {
+    "question" : "In which city?",
+    "answer" : "test"
+  },
+  {
+    "question": "In which state?",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "IN"
+  },
+  {
+    "question" : "What is the beneficiary's ZIP code?",
+    "answer" : "12345"
+  },
+  {
+    "question" : "What is the beneficiary's Social Security Number?",
+    "answer" : "111111111"
+  },
+  {
+    "question" : "What is the beneficiary's email address?",
+    "answer" : "test@test.com"
+  },
+  {
+    "question" : "What is the beneficiary's phone number?",
+    "answer" : "11111111111"
+  },
+  {
+    "question": "Select how benefit amount will be paid to the beneficiary",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Funeral home to deliver to the beneficiary"
+  },
+  {
+    "question" : "Funeral Director's Printed Name",
+    "answer" : "Test"
+  },
+  {
+    "question": "Signature of Funeral Director",
+    "action" : "SIGNATURE_ACTION",
+    "value" : "signatureHelper"
+  },
+  {
+    "question" : "Can beneficiary or next of kin sign the claimant form?",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Yes"
+  },
+  {
+    "question" : "Next of Kin or Beneficiary's Printed Name",
+    "answer" : "test"
+  },
+  {
+    "question": "Signature of Funeral Director",
+    "action" : "SIGNATURE_ACTION",
+    "value" : "signatureHelper"
+  },
+  {
+    "question": "Upload Funeral Home Bill",
+    "action" : "UPLOADDOCUMENT_ACTION",
+    "value" : "uploadDocumentHelper"
+  },
+  {
+    "question": "Would you like to be contacted by a Unity Customer Service Representative in order to build a stronger relationship with Unity and our products?",
+    "action" : "DROPDOWN_ACTION",
+    "value" : "Yes"
+  },
+  {
+    "question" : "Where is the insured Street Address?",
+    "action" : "PREFILLED_DATA"
+
+  }
+]

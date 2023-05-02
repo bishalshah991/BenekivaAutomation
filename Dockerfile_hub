@@ -1,0 +1,28 @@
+FROM selenium/hub:latest
+
+ENV GRID_MAX_SESSION=200 \
+    GRID_BROWSER_TIMEOUT=180000 \
+    GRID_TIMEOUT=180000 \
+    GRID_CLEAN_UP_CYCLE=2000 \
+    GRID_NEW_SESSION_WAIT_TIMEOUT=90000 \
+    GRID_JVM_OPTS=-Xmx2048m \
+    NOVNC_PORT=5900 \
+    NOVNC_HOME=/usr/share/novnc \
+    NOVNC_VERSION=1.1.0 \
+    PATH=$PATH:$NOVNC_HOME/utils
+
+RUN mkdir -p $NOVNC_HOME/utils/websockify \
+  && curl -sSL https://github.com/novnc/noVNC/archive/v${NOVNC_VERSION}.tar.gz | tar xz --strip 1 -C $NOVNC_HOME \
+  && curl -sSL https://github.com/novnc/websockify/archive/v0.9.0.tar.gz | tar xz --strip 1 -C $NOVNC_HOME/utils/websockify \
+  && rm -rf $NOVNC_HOME/vnc_lite.html \
+  && ln -s $NOVNC_HOME/vnc.html $NOVNC_HOME/index.html
+
+COPY generate_config /opt/bin/generate_config
+RUN chmod +x /opt/bin/generate_config
+
+EXPOSE 4444
+EXPOSE $NOVNC_PORT
+
+CMD /opt/bin/generate_config \
+  && java ${GRID_JVM_OPTS} -cp /opt/selenium/selenium-server-standalone.jar:/opt/selenium/* org.openqa.grid.selenium.GridLauncherV3 \
+  && websockify -D --web=/usr/share/novnc/ --wrap-mode=ignore --cert=/etc/ssl/novnc.pem --key=/etc/ssl/novnc.pem 5900 localhost:5900

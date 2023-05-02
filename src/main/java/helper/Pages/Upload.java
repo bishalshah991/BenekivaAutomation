@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Upload extends TestBase {
 
-    String path="D:\\Benekiva\\Intelij\\Automation\\BenekivaAutomation\\src\\main\\resources\\TestData\\TestData.pdf";
+    String path="D:\\Benekiva\\Intelij\\Automation\\BenekivaAutomation\\Unity_Test_Data\\Image.png";
 
     @FindBy(xpath = "//input[@type='file']")
     WebElement uploadDocumentXpath;

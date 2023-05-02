@@ -3,6 +3,6 @@
     "URL" : "https://ufuat.benekiva.io/login",
     "UPLOAD_PATH" : "/home/aayush/ae/src/main/resources/sample.pdf",
     "CHILD_PROTECTION_PLAN" : "UnityJson_File/ChildProtection.json",
-    "AS_REASSIGNED" : "src/main/java/UfUnity_Pages/UfUnityFhd/UfUnityAsReassigned.json"
+    "AS_REASSIGNED" : "UnityJson_File/AsReAssigned.json"
   }
 ]

@@ -3,12 +3,26 @@
     "browser_name": "Chrome",
     "website": "https://ufuat.benekiva.io/login",
     "unityFhdUsername": "bishal+fhd@benekiva.com",
+    "unityCsdUsername": "bishal+csr@benekiva.com",
     "unityFhdPassword": "Amandofidel@7819",
+    "unityPolicySearch": "0770052313",
+    "Year": "2000",
+    "Month": "DEC",
+    "Day":"2",
     "First_name": "Bishal",
     "Last_name": "Shah",
     "Title_User": "Mr",
-    "Year": "2022",
-    "Month" : "DEC",
-    "Day": "2"
+    "Date_of_Birth_Year": "2000",
+    "Date_of_Birth_Month" : "DEC",
+    "Day": "2",
+    "Date_of_Death_Year": "2020",
+    "Date_of_Death_Month" : "DEC",
+    "Cause_Of_Death_Drop_Down": "Natural",
+    "Gender": "Male",
+    "Street_address": "12,New Link Road",
+    "City": "New York",
+    "State": "AL",
+    "Medicaid": "Yes"
+
   }
 ]

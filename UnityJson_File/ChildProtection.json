@@ -27,7 +27,7 @@
   {
     "question": "Enter insured's date of birth",
     "action" : "CALANDER_ACTION",
-    "Year" : "1999",
+    "Year" : "2000",
     "Month" : "FEB",
     "Day" : "11"
   },
@@ -57,7 +57,7 @@
   {
     "question": "Select insured's State of residence",
     "action" : "DROPDOWN_ACTION",
-    "value" : "AR"
+    "value" : "AL"
   },
   {
     "question": "How much is the funeral bill amount?",
@@ -82,7 +82,7 @@
   {
     "question": "In which state?",
     "action" : "DROPDOWN_ACTION",
-    "value" : "TX"
+    "value" : "AL"
   },
   {
     "question": "What is the funeral home's ZIP code?",

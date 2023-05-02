@@ -1,0 +1,110 @@
+version: '3'
+
+services:
+  automation:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - selenium-hub
+    environment:
+      - SELENIUM_HUB_HOST=selenium-hub
+      - SELENIUM_HUB_PORT=4444
+      - ENV=dev
+      - LOG_LEVEL=info
+      - REPORT_PATH=/app/test_results/report.xml
+    entrypoint: /app/entrypoint.sh
+    volumes:
+      - ./src:/app/src
+      - ./testing.xml:/app/testing.xml
+      - ./test_results:/app/test_results
+   
+
+  selenium-hub:
+    image: selenium/hub:latest
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+      - "5900-5999:5900-5999"
+    environment:
+      - GRID_MAX_SESSION=50
+      - GRID_BROWSER_TIMEOUT=180000
+      - GRID_TIMEOUT=180000
+      - GRID_CLEAN_UP_CYCLE=2000
+      - GRID_NEW_SESSION_WAIT_TIMEOUT=90000
+      
+
+
+
+  chrome:
+    image: selenium/node-chrome:latest
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      
+    volumes:
+      - ./chrome-data:/home/seluser/chrome-data
+ 
+
+  # firefox:
+  #   image: selenium/node-firefox:latest
+  #   depends_on:
+  #     - selenium-hub
+  #   environment:
+  #     - SE_EVENT_BUS_HOST=selenium-hub
+  #     - SE_EVENT_BUS_PUBLISH_PORT=4442
+  #     - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+  #   networks:
+  #     - automation
+
+  # edge:
+  #   image: selenium/node-edge:latest
+  #   depends_on:
+  #     - selenium-hub
+  #   environment:
+  #     - SE_EVENT_BUS_HOST=selenium-hub
+  #     - SE_EVENT_BUS_PUBLISH_PORT=4442
+  #     - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+  #   networks:
+  #     - automation
+
+  # chrome_video:
+  #   image: selenium/video:ffmpeg-4.3.1-20230421
+  #   volumes:
+  #     - /tmp/videos:/videos
+  #   depends_on:
+  #     - chrome
+  #   environment:
+  #     - DISPLAY_CONTAINER_NAME=chrome
+  #     - FILE_NAME=chrome_video.mp4
+  #   networks:
+  #     - automation
+
+  # nginx:
+  #   image: nginx
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf
+  #   depends_on:
+  #     - automation
+  #     - chrome
+  #   networks:
+  #     - automation
+
+  # prometheus:
+  #   image: prom/prometheus
+  #   container_name: prometheus
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  #   networks:
+  #     - automation
+
+# networks:
+#   automation:
+  

@@ -1,0 +1,56 @@
+#Before Docker build 
+
+Things to consider:
+
+1. Size of the Image 
+ Each RUN , COPY and ADD instruction in DockerFile adds another layer to image 
+ so cleaning up the image is a major part.
+ 
+ Using shell scripts to put multiple COPY command
+
+
+ Example's 
+
+
+ CODE 
+
+ RUN apt-get install -y software-properties-common 
+
+RUN add-apt-repository ppa:deadsnakes/ppa 
+RUN apt-get update
+
+RUN apt-get install python3
+
+#Just to know if there is python installed in the system to have websockify
+
+RUN apt-cache search python3
+RUN python3 --version
+RUN echo $pythonVs
+
+# This may also not be required . Still to be @tested
+RUN apt-get update && apt-get install -y software-properties-common && \
+    add-apt-repository universe && \
+    apt-get update
+
+#Install the package that is required to connect to websockify.
+RUN apt-get install -y  python3-websockify  
+
+
+CODE_EXIT
+
+As we can see in the above examples 
+There are many layers to this docker image .
+How can we formate this to have less layers and size down the docker Image 
+
+CODE
+
+#Install python3 -- Notes :: The [softwatre-properties-common] is already included  in ubuntu system.
+RUN apt-get install -y software-properties-common && \
+    add-apt-repository ppa:deadsnakes/ppa && \
+    apt-get update && apt-get install -y software-properties-common python3 python3-websockify  && \
+    add-apt-repository universe && \
+    apt-get update
+
+CODE_EXIT
+
+As you can we used one Layer of RUN to do multiple Command.

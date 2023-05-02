@@ -15,7 +15,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -72,7 +71,7 @@ public class IntakeSetup extends TestBase {
 
     public void Begin_Participant(){
         Child_Protection_Plan_Intake.click();
-        new WaitHelper(driver).waitForElement(driver,new ChildProtectionPlan(driver).NextButton,10);
+        //new WaitHelper(driver,10).waitForElement(new ChildProtectionPlan(driver).NextButton);
     }
 
     public void Participant_Flow(String path) throws IOException, ParseException, InterruptedException {
@@ -91,6 +90,7 @@ public class IntakeSetup extends TestBase {
     }
 
     public void Start_Flow(int n) throws IOException, ParseException, InterruptedException {
+
         String xpath = "/html/body/fuse-root/fuse-main/mat-sidenav-container/mat-sidenav-content/div/div/div/fuse-content/fuse-fc-new/div[1]/div/div/mat-horizontal-stepper/div[2]/div/div[2]/div/div/div/div["+n+"]/div/div/button";
         System.out.println(xpath);
         driver.findElement(By.xpath(xpath)).getText();
@@ -99,6 +99,9 @@ public class IntakeSetup extends TestBase {
         uploadDoc = false;
         checkBox = false;
         System.out.println( driver.findElement(By.xpath(xpath)).getText());
+
+
+
         for (Object obj : jsonArr) {
             JSONObject jo = (JSONObject) obj;
             if(jo.get("question").equals(questionAsked) ) {
@@ -116,20 +119,19 @@ public class IntakeSetup extends TestBase {
                 } else if (jo.get("action") != null) {
                     if(jo.get("action").equals("CALANDER_ACTION")){
                         Calendar Calendar = new Calendar(driver);
-//                          String year = jo.get("Year").toString();
-//                          String month = jo.get("Month").toString();
-//                          String day = jo.get("Day").toString();
-//                        Calendar.PickDateFromCalender(year,month,day);
-
-                        calendar.PickDateFromCalender(readJsonData.ReadJSONData("Year"),readJsonData.ReadJSONData("Month"),readJsonData.ReadJSONData("Day"));
-
+                        String year = jo.get("Year").toString();
+                        String month = jo.get("Month").toString();
+                        String day = jo.get("Day").toString();
+                        Calendar.PickDateFromCalender(year,month,day);
 
                     } else if (jo.get("action").equals("DROPDOWN_ACTION")) {
                         objDropDownHelper = new DropDown(driver);
                         String valueForDropdown = jo.get("value").toString();
                         objDropDownHelper.BootStrapDropDown(valueForDropdown);
+
                     } else if (jo.get("action").equals("SIGNATURE_ACTION")) {
-                        objsignature.SignatureHelperClass();
+                        objsignature.Get_Signature_Helper();
+
                     } else if (jo.get("action").equals("UPLOADDOCUMENT_ACTION")) {
                         objupload.addUploadDocument();
                         uploadDoc = true;

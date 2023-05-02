@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Benekiva/Intelij/Automation/BenekivaAutomation">
+        <classes>
+            <class name="UfUnity_Testcase.Fhd.ChildProtectionPlanTest">
+                <methods>
+                    <include name="Go_to_Child_Protection_Tab_Test"/>
+                    <include name="Insert_Data_test"/>
+                    <include name="InsertNumber"/>
+                    <include name="Insert_Date_of_birth"/>
+                    <include name="Insert_Date_of_death"/>
+                    <include name="Select_Cause_of_Death"/>
+                    <include name="Pick_Gender"/>
+                    <include name="Pick_Medicaid"/>
+                    <include name="Pick_State"/>
+                    <include name="Enter_Bill_Amount"/>
+                    <include name="Funeral_Home_Name"/>
+                    <include name="Home_Location"/>
+                    <include name="Insert_PhoneNumber"/>
+                    <include name="EnterEmail"/>
+                    <include name="Amount_Drop_Down"/>
+                    <include name="Direction_Printed_Name"/>
+                    <include name="Sign"/>
+                    <include name="Beneficiary_Printed_Name"/>
+                    <include name="Log_out_FromApplication"/>
+                </methods>
+            </class>
+            <class name="UfUnity_Testcase.Fhd.LoginPageTest">
+                <methods>
+                    <include name="Check_Version_Application_Test"/>
+                    <include name="Login_to_Application_Test"/>
+                    <include name="Logout_from_Application_Test"/>
+                </methods>
+            </class>
+            <class name="UfUnity_Testcase.Fhd.MyProfileTest">
+                <methods>
+                    <include name="Go_To_My_Profile_Test"/>
+                    <include name="Go_To_MyProfile_Test"/>
+                    <include name="Go_To_MyProfile_Info_Test"/>
+                </methods>
+            </class>
+            <class name="UfUnity_Testcase.Fhd.ReAssignedTest">
+                <methods>
+                    <include name="Go_To_As_ReAssigned_Tab_Test"/>
+                    <include name="Insured_Date_of_birth_Test"/>
+                    <include name="Insured_Policy_Certificate"/>
+                    <include name="Insured_First_Name"/>
+                    <include name="Insured_Middle_Name"/>
+                    <include name="Insured_Last_Name"/>
+                    <include name="Insured_Maiden_Name"/>
+                    <include name="Insured_Social_Security_Number"/>
+                    <include name="Insured_Date_of_Death_Test"/>
+                    <include name="Insured_Street_Address"/>
+                    <include name="Insured_City"/>
+                    <include name="Insured_Zip_Code"/>
+                    <include name="Insured_Bill_Amount"/>
+                    <include name="Insured_Home_Street_Address"/>
+                    <include name="Insured_Phone_Number"/>
+                    <include name="Insured_Fax_Number"/>
+                    <include name="Home_Email_Address"/>
+                    <include name="Beneficiary_Full_Name"/>
+                    <include name="Beneficiary_Relationship"/>
+                    <include name="Beneficiary_Residing"/>
+                    <include name="Insured_City_Test"/>
+                    <include name="Insured_Email_Address"/>
+                    <include name="Insured_Director_Printed_Name"/>
+                    <include name="Insured_Signature"/>
+                    <include name="Insured_Beneficiary_Printed_Name"/>
+                    <include name="Go_to_Signature"/>
+                    <include name="Upload_Funeral_Home_Bill"/>
+                </methods>
+            </class>
+            <class name="UfUnity_Testcase.Fhd.UnityEnd_to_End_Test">
+                <methods>
+                    <include name="Go_to_Policy_Search_Tab_Test"/>
+                    <include name="Enter_Detail_of_Genetrate_Quote"/>
+                    <include name="Cause_of_Death"/>
+                    <include name="Enter_Bill_Amount_Test"/>
+                    <include name="Logout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

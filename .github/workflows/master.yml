@@ -1,0 +1,63 @@
+name: Deploy to Remote Server
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: Server Access
+
+    steps:
+      # Checkout the source code
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Build the Docker Compose file
+      - name: Build Docker Compose
+        run: |
+          docker-compose build
+
+      # Copy the Docker Compose file to server1
+      - name: Copy Docker Compose file
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+          port: 2020
+
+          source: ./docker-compose.yml
+          target: ./
+
+      # SSH into server1 and then server2 to deploy
+      - name: Deploy using SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+          port: 2020
+
+          script: |
+            touch new.txt
+
+      # Copy the Docker Compose file from jump server to remote server
+      - name: Copy Docker Compose file to Remote server
+        run: |
+          scp -o "StrictHostKeyChecking=no" -o "ProxyJump=niteshp@jump.benekiva.io" -i ${{ secrets.KEY }} /docker-compose.yml @ubuntu@aedev.benekiva.io:/
+
+      # SSH into remote server to deploy
+      - name: Deploy using SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ubuntu@aedev.benekiva.io
+          key: ${{ secrets.AKEY }}
+
+          script: |
+
+            sudo docker-compose build
+            sudo docker network create automation        
+            # docker-compose up

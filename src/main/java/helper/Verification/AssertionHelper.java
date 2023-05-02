@@ -21,10 +21,10 @@ public class AssertionHelper {
         boolean isDispalyed = false;
         try {
             element.isDisplayed();
-            System.out.println(element.getText()+"is Displayed");
+            System.out.println(element.getText()+ "is Displayed");
         }
         catch(Exception ex) {
-            System.out.println("Element is not Found:-"+ex);
+            System.out.println("Element is not Found:- "+ex);
             isDispalyed = true;
         }
 

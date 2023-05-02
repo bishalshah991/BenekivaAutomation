@@ -14,7 +14,7 @@ public class MyProfile extends TestBase {
 
     public MyProfile(WebDriver driver) {
         this.driver=driver;
-        waitHelper=new WaitHelper(driver);
+        waitHelper=new WaitHelper(driver,10);
         assertionHelper=new AssertionHelper();
         PageFactory.initElements(driver,this);
     }
@@ -42,14 +42,14 @@ public class MyProfile extends TestBase {
     WebElement CloseButton ;
 
     public void Go_To_MyProfile(){
-        waitHelper.waitForElement(driver,MyProfileTab,10);
+        waitHelper.waitForElement(MyProfileTab);
         MyProfileTab.click();
-        waitHelper.waitForElement(driver,MyProfileText,10);
+        waitHelper.waitForElement(MyProfileText);
         assertionHelper.verifyTextEquals(MyProfileText,"My Profile");
     }
 
     public void Go_To_MyProfile_Info(String f_name,String middle_name,String l_name){
-        waitHelper.waitForElement(driver,FirstName,10);
+        waitHelper.waitForElement(FirstName);
         FirstName.clear();
         FirstName.sendKeys(f_name);
         MiddleName.clear();
@@ -57,9 +57,9 @@ public class MyProfile extends TestBase {
         LastName.clear();
         LastName.sendKeys(l_name);
         SaveButton.click();
-        waitHelper.waitForElement(driver,VerificationAlert,10);
+        waitHelper.waitForElement(VerificationAlert);
         CloseButton.click();
-        waitHelper.waitForElement(driver,MyProfileText,10);
+        waitHelper.waitForElement(MyProfileText);
     }
 
 
