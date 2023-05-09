@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="D:/Benekiva/Intelij/Automation/BenekivaAutomation/src/test/java/UfUnity_Testcase/Fhd">
+        <classes>
+            <class name="UfUnity_Testcase.Fhd.ChildProtectionPlanTest">
+                <methods>
+                    <include name="Go_to_Child_Protection_Tab_Test"/>
+                </methods>
+            </class>
+            <class name="UfUnity_Testcase.Fhd.LoginPageTest">
+                <methods>
+                    <include name="Check_Version_Application_Test"/>
+                    <include name="Login_to_Application_Test"/>
+                    <include name="Logout_from_Application_Test"/>
+                </methods>
+            </class>
+            <class name="UfUnity_Testcase.Fhd.MyProfileTest">
+                <methods>
+                    <include name="Go_To_My_Profile_Test"/>
+                    <include name="Go_To_MyProfile_Test"/>
+                    <include name="Go_To_MyProfile_Info_Test"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
