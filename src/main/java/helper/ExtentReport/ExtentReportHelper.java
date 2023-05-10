@@ -17,6 +17,7 @@ public class ExtentReportHelper {
         extentReports.setSystemInfo("QA","Bishal Shah");
         extentReports.setSystemInfo("OS",System.getProperty("os.name"));
         return  extentReports;
+
     }
 
 
