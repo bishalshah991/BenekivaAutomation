@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">UNITY Automation Result</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 11, 2023 05:12:37 AM</span></a>
+<a href="#"><span class="badge badge-primary">May 11, 2023 08:47:01 PM</span></a>
 </li>
 </ul>
 </div>
@@ -87,7 +87,7 @@
           <div class="test-detail">
             <p class="name">Go_to_Child_Protection_Tab_Test</p>
             <p class="text-sm">
-              <span>5:13:00 AM</span> / <span>00:00:29:284</span>
+              <span>8:47:15 PM</span> / <span>00:00:26:296</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -96,9 +96,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Go_to_Child_Protection_Tab_Test</h5>
-<span class='badge badge-success'>05.11.2023 5:13:00 AM</span>
-<span class='badge badge-danger'>05.11.2023 5:13:29 AM</span>
-<span class='badge badge-default'>00:00:29:284</span>
+<span class='badge badge-success'>05.11.2023 8:47:15 PM</span>
+<span class='badge badge-danger'>05.11.2023 8:47:41 PM</span>
+<span class='badge badge-default'>00:00:26:296</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -110,17 +110,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:13:29 AM</td>
+        <td>8:47:41 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="mat-option-text">...</span> is not clickable at point (883, 540). Other element would receive the click: <div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing"></div>
-  (Session info: chrome=112.0.5615.138)
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/fuse-root/fuse-main/mat-sidenav-container/mat-sidenav-content/div/div/div/fuse-content/fuse-fc-new/div[1]/div/div/mat-horizontal-stepper/div[2]/div/div[2]/div/div/div/div[25]/div/div/button
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.8.1', revision: '8ebccac989'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6f63fc690c6ac8bf3c84881f74949948, clickElement {id=8ffd33de-32d3-4a0b-a8c4-6ef202c1c746}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\bisha\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60524}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60524/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (6f63fc690c6ac8bf3c84881f74949948)] -> xpath: //mat-option[@role='option']/span[contains(text(),'TX')]]
-Session ID: 6f63fc690c6ac8bf3c84881f74949948
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [065ecf18-7b9c-44b3-84e9-5b2e22860891, findElement {using=xpath, value=/html/body/fuse-root/fuse-main/mat-sidenav-container/mat-sidenav-content/div/div/div/fuse-content/fuse-fc-new/div[1]/div/div/mat-horizontal-stepper/div[2]/div/div[2]/div/div/div/div[25]/div/div/button}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0.2, moz:accessibilityChecks: false, moz:buildID: 20230424110519, moz:debuggerAddress: 127.0.0.1:23148, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8416, moz:profile: C:\Users\bisha\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:23148/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 065ecf18-7b9c-44b3-84e9-5b2e22860891
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -131,20 +130,11 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at helper.Pages.DropDown.BootStrapDropDown(DropDown.java:40)
-	at Intake_Setup.IntakeSetup.Start_Flow(IntakeSetup.java:130)
-	at Intake_Setup.IntakeSetup.next(IntakeSetup.java:90)
-	at Intake_Setup.IntakeSetup.Start_Flow(IntakeSetup.java:169)
-	at Intake_Setup.IntakeSetup.next(IntakeSetup.java:90)
-	at Intake_Setup.IntakeSetup.Start_Flow(IntakeSetup.java:169)
-	at Intake_Setup.IntakeSetup.next(IntakeSetup.java:90)
-	at Intake_Setup.IntakeSetup.Start_Flow(IntakeSetup.java:169)
-	at Intake_Setup.IntakeSetup.next(IntakeSetup.java:90)
-	at Intake_Setup.IntakeSetup.Start_Flow(IntakeSetup.java:169)
-	at Intake_Setup.IntakeSetup.next(IntakeSetup.java:90)
-	at Intake_Setup.IntakeSetup.Start_Flow(IntakeSetup.java:169)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at Intake_Setup.IntakeSetup.Start_Flow(IntakeSetup.java:96)
 	at Intake_Setup.IntakeSetup.next(IntakeSetup.java:90)
 	at Intake_Setup.IntakeSetup.Start_Flow(IntakeSetup.java:169)
 	at Intake_Setup.IntakeSetup.next(IntakeSetup.java:90)
@@ -213,7 +203,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
           <div class="test-detail">
             <p class="name">Check_Version_Application_Test</p>
             <p class="text-sm">
-              <span>5:13:48 AM</span> / <span>00:00:00:021</span>
+              <span>8:47:54 PM</span> / <span>00:00:00:017</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -222,9 +212,9 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Check_Version_Application_Test</h5>
-<span class='badge badge-success'>05.11.2023 5:13:48 AM</span>
-<span class='badge badge-danger'>05.11.2023 5:13:48 AM</span>
-<span class='badge badge-default'>00:00:00:021</span>
+<span class='badge badge-success'>05.11.2023 8:47:54 PM</span>
+<span class='badge badge-danger'>05.11.2023 8:47:54 PM</span>
+<span class='badge badge-default'>00:00:00:017</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -236,7 +226,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:48 AM</td>
+        <td>8:47:54 PM</td>
         <td>
           Check_Version_Application_Testis Passed
         </td>
@@ -253,7 +243,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
           <div class="test-detail">
             <p class="name">Login_to_Application_Test</p>
             <p class="text-sm">
-              <span>5:13:48 AM</span> / <span>00:00:02:299</span>
+              <span>8:47:54 PM</span> / <span>00:00:02:493</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -262,9 +252,9 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Login_to_Application_Test</h5>
-<span class='badge badge-success'>05.11.2023 5:13:48 AM</span>
-<span class='badge badge-danger'>05.11.2023 5:13:50 AM</span>
-<span class='badge badge-default'>00:00:02:299</span>
+<span class='badge badge-success'>05.11.2023 8:47:54 PM</span>
+<span class='badge badge-danger'>05.11.2023 8:47:57 PM</span>
+<span class='badge badge-default'>00:00:02:493</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -276,7 +266,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:50 AM</td>
+        <td>8:47:57 PM</td>
         <td>
           Login_to_Application_Testis Passed
         </td>
@@ -293,7 +283,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
           <div class="test-detail">
             <p class="name">Logout_from_Application_Test</p>
             <p class="text-sm">
-              <span>5:13:50 AM</span> / <span>00:00:01:741</span>
+              <span>8:47:57 PM</span> / <span>00:00:01:067</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -302,9 +292,9 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Logout_from_Application_Test</h5>
-<span class='badge badge-success'>05.11.2023 5:13:50 AM</span>
-<span class='badge badge-danger'>05.11.2023 5:13:52 AM</span>
-<span class='badge badge-default'>00:00:01:741</span>
+<span class='badge badge-success'>05.11.2023 8:47:57 PM</span>
+<span class='badge badge-danger'>05.11.2023 8:47:58 PM</span>
+<span class='badge badge-default'>00:00:01:067</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -316,7 +306,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:13:52 AM</td>
+        <td>8:47:58 PM</td>
         <td>
           Logout_from_Application_Testis Passed
         </td>
@@ -333,7 +323,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
           <div class="test-detail">
             <p class="name">Go_To_My_Profile_Test</p>
             <p class="text-sm">
-              <span>5:14:12 AM</span> / <span>00:00:00:109</span>
+              <span>8:48:10 PM</span> / <span>00:00:00:277</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -342,9 +332,9 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Go_To_My_Profile_Test</h5>
-<span class='badge badge-success'>05.11.2023 5:14:12 AM</span>
-<span class='badge badge-danger'>05.11.2023 5:14:12 AM</span>
-<span class='badge badge-default'>00:00:00:109</span>
+<span class='badge badge-success'>05.11.2023 8:48:10 PM</span>
+<span class='badge badge-danger'>05.11.2023 8:48:11 PM</span>
+<span class='badge badge-default'>00:00:00:277</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -356,7 +346,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:14:12 AM</td>
+        <td>8:48:11 PM</td>
         <td>
           Go_To_My_Profile_Testis Passed
         </td>
@@ -373,7 +363,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
           <div class="test-detail">
             <p class="name">Go_To_MyProfile_Test</p>
             <p class="text-sm">
-              <span>5:14:12 AM</span> / <span>00:00:00:223</span>
+              <span>8:48:11 PM</span> / <span>00:00:00:852</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -382,9 +372,9 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Go_To_MyProfile_Test</h5>
-<span class='badge badge-success'>05.11.2023 5:14:12 AM</span>
-<span class='badge badge-danger'>05.11.2023 5:14:12 AM</span>
-<span class='badge badge-default'>00:00:00:223</span>
+<span class='badge badge-success'>05.11.2023 8:48:11 PM</span>
+<span class='badge badge-danger'>05.11.2023 8:48:12 PM</span>
+<span class='badge badge-default'>00:00:00:852</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -396,7 +386,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:14:12 AM</td>
+        <td>8:48:12 PM</td>
         <td>
           Go_To_MyProfile_Testis Passed
         </td>
@@ -413,7 +403,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
           <div class="test-detail">
             <p class="name">Go_To_MyProfile_Info_Test</p>
             <p class="text-sm">
-              <span>5:14:12 AM</span> / <span>00:00:01:563</span>
+              <span>8:48:12 PM</span> / <span>00:00:00:745</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -422,9 +412,9 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Go_To_MyProfile_Info_Test</h5>
-<span class='badge badge-success'>05.11.2023 5:14:12 AM</span>
-<span class='badge badge-danger'>05.11.2023 5:14:14 AM</span>
-<span class='badge badge-default'>00:00:01:563</span>
+<span class='badge badge-success'>05.11.2023 8:48:12 PM</span>
+<span class='badge badge-danger'>05.11.2023 8:48:12 PM</span>
+<span class='badge badge-default'>00:00:00:745</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -436,7 +426,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:14:14 AM</td>
+        <td>8:48:12 PM</td>
         <td>
           Go_To_MyProfile_Info_Testis Passed
         </td>
@@ -468,12 +458,12 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<h4>org.openqa.selenium.NoSuchElementException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -487,7 +477,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>05:13:00 AM</td>
+<td>20:47:15 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>Go_to_Child_Protection_Tab_Test</a>
 </td>
@@ -509,13 +499,13 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 11, 2023 05:12:37 AM</h3>
+<h3>May 11, 2023 08:47:01 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 11, 2023 05:14:14 AM</h3>
+<h3>May 11, 2023 08:48:13 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -585,7 +575,7 @@ Session ID: 6f63fc690c6ac8bf3c84881f74949948
 </div></div>
 <script>
 var timeline = {
-"Go_to_Child_Protection_Tab_Test":29.284,"Check_Version_Application_Test":0.021,"Login_to_Application_Test":2.299,"Logout_from_Application_Test":1.741,"Go_To_My_Profile_Test":0.109,"Go_To_MyProfile_Test":0.223,"Go_To_MyProfile_Info_Test":1.563
+"Go_to_Child_Protection_Tab_Test":26.296,"Check_Version_Application_Test":0.017,"Login_to_Application_Test":2.493,"Logout_from_Application_Test":1.067,"Go_To_My_Profile_Test":0.277,"Go_To_MyProfile_Test":0.852,"Go_To_MyProfile_Info_Test":0.745
 };
 </script>
 <div class="row">
