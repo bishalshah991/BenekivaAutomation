@@ -32,7 +32,7 @@ public class Calendar extends TestBase {
     @FindBy(xpath = "//div[contains(@class,'mat-calendar-arrow')]")
     WebElement PickYear;
     public static JSONArray json;
-    public void PickDateFromCalender(String Year, String Month, String Day) throws IOException, org.json.simple.parser.ParseException {
+    public void PickDateFromCalender(String Year, String Month, String Day) {
         String year=Year;
         String month=Month;
         String day=Day;

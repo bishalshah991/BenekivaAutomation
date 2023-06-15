@@ -39,7 +39,6 @@ public class ChildProtectionPlan extends TestBase {
 
     public void Begin_Participant(String path) throws IOException, ParseException, InterruptedException {
         intakeInitialization.Participant_Flow(path);
-
     }
 
 }

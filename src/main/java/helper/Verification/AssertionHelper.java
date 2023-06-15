@@ -1,8 +1,13 @@
 package helper.Verification;
 
+import BaseClass.TestBase;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class AssertionHelper {
+    static WebDriver driver;
+    static String image;
+
 
     public static synchronized boolean verifyElementPresent( WebElement element) {
         boolean isDispalyed = false;
@@ -50,6 +55,22 @@ public class AssertionHelper {
             System.out.println("Text is not Matching"+ex);
             return false;
         }
+    }
+
+
+    public static synchronized boolean Verify_the_an_Element(WebElement element) {
+        boolean isDispalyed = false;
+        try {
+            isDispalyed= element.isDisplayed();
+            System.out.println(element.getText()+" is displayed");
+        }
+        catch(Exception ex) {
+            System.out.println("Element is not Found:"+ex);
+            TestBase.captureScreenshot(image);
+        }
+
+        return isDispalyed;
+
     }
 
 

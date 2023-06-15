@@ -1,14 +1,33 @@
 [
   {
-    "browser_name": "Firefox",
+    "browser_name": "Chrome",
     "website": "https://ufuat.benekiva.io/login",
+    "websiteHlc": "https://hlcuat2.benekiva.io/login",
     "unityFhdUsername": "bishal+fhd@benekiva.com",
     "unityFhdPassword": "Amandofidel@7819",
+    "unityCsrUsername": "bishal+csr@benekiva.com",
+    "unityClmUsername": "bishal+clm@benekiva.com",
+    "unityClmPassword": "NiceP@ssword1234",
+    "unityCsrPassword": "Amandofidel@7819",
+    "hlcFhdUsername": "bishal+fhd@benekiva.com",
+    "hlcCsrUsername": "bishal+csr@benekiva.com",
+    "hlcFhdPassword": "NicePassword@1900",
+    "unityCsrPolicySearch1": "0770045200",
+    "unityCsrPolicySearch2": "0770045201",
+    "unityClmPolicySearch": "0770045205",
+    "hlcFhdPolicySearch": "0002391722",
+    "hlcCsrPolicySearch": "0002482529",
     "First_name": "Bishal",
     "Last_name": "Shah",
     "Title_User": "Mr",
     "Year": "2022",
+    "Year1": "2001",
     "Month" : "DEC",
-    "Day": "2"
+    "Day": "2",
+    "DOB": "05/22/2023",
+    "Date-of-Death": "05/16/2023",
+    "Cause_of_Death": "Accident",
+    "Bill_Amount": "5555",
+    "Phone": "9803001742"
   }
 ]

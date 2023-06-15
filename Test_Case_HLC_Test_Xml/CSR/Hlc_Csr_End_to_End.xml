@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="HLC Test on Chrome">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="author" value="Bishal"></parameter>
+        <classes>
+            <class name="TestCase.HLC.CSR.HLC_Csr_End_to_End_Test"></class>
+        </classes>
+    </test>
+</suite>
