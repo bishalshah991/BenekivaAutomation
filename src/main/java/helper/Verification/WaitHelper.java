@@ -19,8 +19,8 @@ public class WaitHelper {
         PageFactory.initElements(driver,this);
     }
 
-    public void waitForElement(WebDriver driver, WebElement element, long timeout) {
-        WebDriverWait wait=new WebDriverWait(driver,Duration.ofMinutes(timeout));
+    public static void Wait_For_Element(WebDriver driver, WebElement element, long timeout) {
+        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(timeout));
         wait.until(ExpectedConditions.visibilityOf(element));
 
         boolean status=element.isDisplayed();
@@ -31,5 +31,18 @@ public class WaitHelper {
             System.out.println("Element is not Displayed");
         }
 
+    }
+
+    public void waitForElement(WebDriver driver, WebElement element,long timeout) {
+        WebDriverWait wait=new WebDriverWait(driver,Duration.ofMinutes(timeout));
+        wait.until(ExpectedConditions.visibilityOf(element));
+
+        boolean status=element.isDisplayed();
+        if (status){
+            System.out.println("Element is Displayed:-"+element.getText());
+        }
+        else {
+            System.out.println("Element is not Displayed");
+        }
     }
 }

@@ -20,6 +20,18 @@
   </properties>
 
   <dependencies>
+    
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.2</version>
+        </dependency>
+   
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>
     <dependency>
 
       <groupId>org.seleniumhq.selenium</groupId>
@@ -41,11 +53,7 @@
       <version>1.1.1</version>
     </dependency>
 
-    <dependency>
-      <groupId>io.github.bonigarcia</groupId>
-      <artifactId>webdrivermanager</artifactId>
-      <version>5.3.1</version>
-    </dependency>
+
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
@@ -68,16 +76,7 @@
           <target>1.8</target>
         </configuration>
       </plugin>
-      <!-- <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.2.0</version>
-        <configuration>
-          <includes>
-            <include>**/test/**</include>
-          </includes>
-        </configuration>
-      </plugin> -->
+
 
       <!-- Maven Assembly Plugin -->
       <plugin>
@@ -128,21 +127,6 @@
             <version>1.18.20</version>
           </dependency>
           
-           <dependency>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-            <version>1.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.3.2</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.3.2</version>
-        </dependency>
         </dependencies>
       </plugin>
 

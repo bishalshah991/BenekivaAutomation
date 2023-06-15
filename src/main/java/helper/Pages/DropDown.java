@@ -17,7 +17,8 @@ public class DropDown extends TestBase {
 
 
     @FindBy(xpath = "//div[contains(@class,'mat-select-arrow')]")
-    WebElement classicDropdownXpath;
+    public WebElement classicDropdownXpath;
+
 
     public DropDown(WebDriver driver)
     {
@@ -31,8 +32,9 @@ public class DropDown extends TestBase {
         select.selectByVisibleText(visibleValue);
     }
 
-    public void BootStrapDropDown(String value) throws InterruptedException {
+    public void BootStrapDropDown(String value){
         classicDropdownXpath.click();
+
         List<WebElement> allDropDownValues=driver.findElements(By.xpath("//div[@role='listbox']/mat-option"));
         int dropDownCount= allDropDownValues.size();
         WebElement option = driver.findElement(By.xpath("//mat-option[@role='option']/span[contains(text(),'"+value+"')]"));
@@ -45,6 +47,24 @@ public class DropDown extends TestBase {
         WebElement option = driver.findElement(By.xpath("//mat-option[@role='option']/span[normalize-space(text()) = '"+value+"']"));
         System.out.println("Total items present in the dropdown : "+dropDownCount);
         option.click();
+
+    }
+
+    public void Handling_Drop_Down(int n,String cause){
+        classicDropdownXpath.click();
+        WebElement element=driver.findElement(By.xpath("//div[@role='listbox']/mat-option['"+n+"']"));
+        objWaitHelper.waitForElement(driver,element,10);
+        List<WebElement> dropdown_list=driver.findElements(By.xpath("//div[@role='listbox']/mat-option"));
+        System.out.println("The Options in the Dropdown are: " + dropdown_list.size());
+
+        for (int i=0;i<=dropdown_list.size();i++){
+            System.out.println(dropdown_list.get(i).getText());
+
+            if (dropdown_list.get(i).getText().contains(cause)){
+                dropdown_list.get(i).click();
+                break;
+            }
+        }
 
     }
 }
